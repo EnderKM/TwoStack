@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TwoStack - Modern Web Design for Local Businesses</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#784040',secondary:''},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+background-color: #121212;
+color: #f5f5f5;
+}
+.gradient-bg {
+background: linear-gradient(135deg, #000000, #784040, #ffffff);
+}
+.gradient-text {
+background: linear-gradient(135deg, #ffffff, #a67c7c);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+.card-shadow {
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+</style>
+</head>
+<body class="min-h-screen">
+<!-- Navigation -->
+<nav class="bg-black bg-opacity-90 py-4 sticky top-0 z-50">
+<div class="container mx-auto px-6 flex justify-between items-center">
+<a href="#" class="flex items-center gap-2">
+<div class="w-10 h-10 flex items-center justify-center">
+<div class="w-8 h-8 rounded-full border border-white flex items-center justify-center">
+<div class="w-6 h-6 rounded-full border border-white relative">
+<div class="absolute inset-0 border-t border-white rotate-45"></div>
+<div class="absolute inset-0 border-l border-white -rotate-45"></div>
+</div>
+</div>
+</div>
+<span class="text-2xl font-['Pacifico'] text-white">TwoStack</span>
+</a>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#" class="text-white hover:text-primary transition-colors">Home</a>
+<a href="#services" class="text-white hover:text-primary transition-colors">Services</a>
+<a href="#pricing" class="text-white hover:text-primary transition-colors">Pricing</a>
+<a href="#contact" class="text-white hover:text-primary transition-colors">Contact</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-white ri-2x"></i>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-black via-primary to-black opacity-90"></div>
+<div style="background-image: url('https://readdy.ai/api/search-image?query=professional%2520web%2520design%2520studio%2520with%2520modern%2520computers%2520and%2520digital%2520interfaces%2520showing%2520website%2520designs%252C%2520dark%2520elegant%2520atmosphere%2520with%2520subtle%2520lighting%252C%2520clean%2520workspace%2520with%2520minimal%2520design&width=1920&height=1080&seq=1&orientation=landscape'); background-position: center; background-size: cover;" class="min-h-[600px]">
+<div class="container mx-auto px-6 py-24 relative z-10">
+<div class="max-w-2xl">
+<h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">Modern Web Design for Local Businesses</h1>
+<p class="text-xl md:text-2xl mb-8 text-gray-200">We create stunning, professional websites that drive results for restaurants, local companies, and small businesses.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#pricing" class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">Get Started</a>
+<a href="#contact" class="bg-transparent border-2 border-white hover:border-primary hover:text-primary text-white px-8 py-3 rounded-button font-medium transition-colors whitespace-nowrap">Contact Us</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-900">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4 gradient-text">What We Offer</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">Professional web design services tailored for local businesses looking to establish a strong online presence.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-black bg-opacity-60 rounded-lg p-8 card-shadow border border-gray-800 hover:border-primary transition-all">
+<div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+<i class="ri-palette-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-white">Custom Design</h3>
+<p class="text-gray-300">Professionally designed websites that reflect your brand identity and appeal to your target audience.</p>
+</div>
+<div class="bg-black bg-opacity-60 rounded-lg p-8 card-shadow border border-gray-800 hover:border-primary transition-all">
+<div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+<i class="ri-smartphone-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-white">Mobile Responsive</h3>
+<p class="text-gray-300">Websites that look and function perfectly on all devices, from desktops to smartphones.</p>
+</div>
+<div class="bg-black bg-opacity-60 rounded-lg p-8 card-shadow border border-gray-800 hover:border-primary transition-all">
+<div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+<i class="ri-search-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-white">SEO Basics</h3>
+<p class="text-gray-300">Google-friendly setup to help your business get found online by potential customers.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4 gradient-text">Our Process</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">We've streamlined our development process to deliver high-quality websites efficiently.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="relative">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 z-10">
+<span class="text-2xl font-bold text-white">1</span>
+</div>
+<h3 class="text-xl font-bold mb-2 text-white text-center">Consultation</h3>
+<p class="text-gray-300 text-center">We discuss your business needs and website goals.</p>
+</div>
+<div class="hidden md:block absolute top-8 left-1/2 w-full h-1 bg-gray-800"></div>
+</div>
+<div class="relative">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 z-10">
+<span class="text-2xl font-bold text-white">2</span>
+</div>
+<h3 class="text-xl font-bold mb-2 text-white text-center">Design & Development</h3>
+<p class="text-gray-300 text-center">We create a custom design and build your website.</p>
+</div>
+<div class="hidden md:block absolute top-8 left-1/2 w-full h-1 bg-gray-800"></div>
+</div>
+<div class="relative">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 z-10">
+<span class="text-2xl font-bold text-white">3</span>
+</div>
+<h3 class="text-xl font-bold mb-2 text-white text-center">Launch & Support</h3>
+<p class="text-gray-300 text-center">We launch your site and provide ongoing maintenance.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<p class="text-xl text-gray-300 mb-8">From initial consultation to launch, we typically complete projects in 7-10 days.</p>
+<a href="#pricing" class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">View Our Packages</a>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section id="pricing" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4 gradient-text">Transparent Pricing</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">Affordable web design packages for businesses of all sizes.</p>
+</div>
+<div class="max-w-4xl mx-auto">
+<div class="bg-black bg-opacity-60 rounded-lg overflow-hidden card-shadow border border-gray-800">
+<div class="p-8 border-b border-gray-800">
+<h3 class="text-3xl font-bold mb-4 text-white">Website Proposal</h3>
+<p class="text-xl text-gray-300">Modern Web Design for Local Businesses</p>
+</div>
+<div class="p-8">
+<div class="mb-12">
+<div class="flex justify-between items-center mb-6">
+<h4 class="text-2xl font-bold text-white">One-Time Setup</h4>
+<span class="text-3xl font-bold text-primary">$300</span>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Custom-designed website (up to 5 pages)</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Mobile-responsive layout</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Menu, location, and contact details</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Contact form or booking button</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Social media integration</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">SEO basics (Google-friendly setup)</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Two rounds of free revisions</span>
+</li>
+</ul>
+</div>
+<div class="mb-12">
+<div class="flex justify-between items-center mb-6">
+<h4 class="text-2xl font-bold text-white">Monthly Maintenance</h4>
+<span class="text-3xl font-bold text-primary">$30<span class="text-lg font-normal">/month</span></span>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Hosting + domain support</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Monthly backups</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Menu or content updates</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Security monitoring & plugin updates</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Priority support</span>
+</li>
+</ul>
+</div>
+<div class="mb-8">
+<h4 class="text-2xl font-bold mb-4 text-white">Timeline</h4>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-time-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Preview: Homepage design within 3–5 days after receiving content</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mt-0.5">
+<i class="ri-time-line text-primary"></i>
+</div>
+<span class="ml-2 text-gray-300">Launch: Final site ready 7–10 days after approval</span>
+</li>
+</ul>
+</div>
+<div class="text-center">
+<a href="#contact" class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-button font-medium inline-block whitespace-nowrap">Get Started</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4 gradient-text">Frequently Asked Questions</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">Answers to common questions about our web design services.</p>
+</div>
+<div class="max-w-3xl mx-auto space-y-6">
+<div class="bg-gray-900 rounded-lg overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" id="faq1-btn">
+<span class="text-xl font-medium text-white">What's included in the setup fee?</span>
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-down-s-line text-primary ri-lg transition-transform" id="faq1-icon"></i>
+</div>
+</button>
+<div class="px-6 pb-6 hidden" id="faq1-content">
+<p class="text-gray-300">The one-time setup fee of $300 includes a custom-designed website with up to 5 pages, mobile-responsive layout, menu/location/contact details, contact form or booking button, social media integration, SEO basics, and two rounds of free revisions.</p>
+</div>
+</div>
+<div class="bg-gray-900 rounded-lg overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" id="faq2-btn">
+<span class="text-xl font-medium text-white">What does monthly maintenance cover?</span>
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-down-s-line text-primary ri-lg transition-transform" id="faq2-icon"></i>
+</div>
+</button>
+<div class="px-6 pb-6 hidden" id="faq2-content">
+<p class="text-gray-300">Our monthly maintenance package ($30/month) includes hosting and domain support, monthly backups, menu or content updates, security monitoring and plugin updates, and priority support for any issues that arise.</p>
+</div>
+</div>
+<div class="bg-gray-900 rounded-lg overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" id="faq3-btn">
+<span class="text-xl font-medium text-white">How long does the process take?</span>
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-down-s-line text-primary ri-lg transition-transform" id="faq3-icon"></i>
+</div>
+</button>
+<div class="px-6 pb-6 hidden" id="faq3-content">
+<p class="text-gray-300">We provide a homepage design preview within 3-5 days after receiving your content. The final website is typically ready for launch 7-10 days after you approve the design.</p>
+</div>
+</div>
+<div class="bg-gray-900 rounded-lg overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" id="faq4-btn">
+<span class="text-xl font-medium text-white">How many revisions are included?</span>
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-down-s-line text-primary ri-lg transition-transform" id="faq4-icon"></i>
+</div>
+</button>
+<div class="px-6 pb-6 hidden" id="faq4-content">
+<p class="text-gray-300">Our package includes two rounds of free revisions to ensure you're completely satisfied with your website. Additional revisions can be arranged at a reasonable rate if needed.</p>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-xl text-gray-300 mb-6">Still have questions?</p>
+<a href="#contact" class="bg-transparent border-2 border-primary hover:bg-primary text-primary hover:text-white px-8 py-3 rounded-button font-medium transition-colors whitespace-nowrap">Contact Us</a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gradient-to-b from-black to-gray-900">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4 gradient-text">Get In Touch</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">Ready to elevate your online presence? Contact us today to get started.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+<form action="https://formsubmit.co/el/tucemo" method="POST" class="space-y-6">
+  <div>
+    <label for="name" class="block text-gray-300 mb-2">Full Name</label>
+    <input type="text" id="name" name="name" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:border-primary focus:outline-none" placeholder="Your name" required>
+  </div>
+  <div>
+    <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+    <input type="email" id="email" name="email" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:border-primary focus:outline-none" placeholder="Your email" required>
+  </div>
+  <div>
+    <label for="phone" class="block text-gray-300 mb-2">Phone Number</label>
+    <input type="tel" id="phone" name="phone" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:border-primary focus:outline-none" placeholder="Your phone">
+  </div>
+  <div>
+    <label for="message" class="block text-gray-300 mb-2">Message</label>
+    <textarea id="message" name="message" rows="4" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:border-primary focus:outline-none" placeholder="Tell us about your project" required></textarea>
+  </div>
+
+  <!-- Optional extras for spam protection and redirect -->
+  <input type="text" name="_honey" style="display:none">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
+  <button type="submit" class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">Send Message</button>
+</form>
+
+
+<div>
+<h3 class="text-2xl font-bold mb-6 text-white">Contact Information</h3>
+<div class="space-y-8">
+<div class="bg-gray-900 rounded-lg p-6 card-shadow">
+<div class="flex items-start">
+<div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line text-primary ri-lg"></i>
+</div>
+<div>
+<h4 class="text-xl font-bold text-white">Yaseen Adam</h4>
+<p class="text-gray-300 mt-1">Web Designer</p>
+<div class="mt-3 space-y-2">
+<a href="tel:0767369891" class="flex items-center text-gray-300 hover:text-primary">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-phone-line"></i>
+</div>
+<span class="ml-2">076 736 9891</span>
+</a>
+<a href="mailto:yaseenadam45@gmail.com" class="flex items-center text-gray-300 hover:text-primary">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-mail-line"></i>
+</div>
+<span class="ml-2">yaseenadam45@gmail.com</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gray-900 rounded-lg p-6 card-shadow">
+<div class="flex items-start">
+<div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line text-primary ri-lg"></i>
+</div>
+<div>
+<h4 class="text-xl font-bold text-white">Ahmed Ahmed</h4>
+<p class="text-gray-300 mt-1">Web Developer</p>
+<div class="mt-3 space-y-2">
+<a href="tel:0792499975" class="flex items-center text-gray-300 hover:text-primary">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-phone-line"></i>
+</div>
+<span class="ml-2">079 249 9975</span>
+</a>
+<a href="mailto:alhadiahmed1379@gmail.com" class="flex items-center text-gray-300 hover:text-primary">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-mail-line"></i>
+</div>
+<span class="ml-2">alhadiahmed1379@gmail.com</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<a href="https://wa.me/qr/YE4ITBTCMN7BA1" class="flex items-center bg-[#25D366] hover:bg-opacity-90 text-white px-6 py-3 rounded-button whitespace-nowrap">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-whatsapp-fill"></i>
+</div>
+<span>WhatsApp</span>
+</a>
+<a href="#" class="flex items-center bg-transparent border-2 border-primary hover:bg-primary text-primary hover:text-white px-6 py-3 rounded-button transition-colors whitespace-nowrap">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</div>
+<span>Book a Call</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 relative">
+<div class="absolute inset-0 gradient-bg opacity-90"></div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-4xl font-bold mb-6 text-white">Ready to Elevate Your Online Presence?</h2>
+<p class="text-xl text-gray-200 mb-8">Let us help you create a stunning website that attracts customers and grows your business.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="#contact" class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-button font-medium whitespace-nowrap">Get Started</a>
+<a href="#services" class="bg-transparent border-2 border-white hover:border-gray-200 text-white hover:text-gray-200 px-8 py-3 rounded-button font-medium transition-colors whitespace-nowrap">Learn More</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black py-12">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="flex items-center gap-2 mb-4">
+<div class="w-8 h-8 flex items-center justify-center">
+<div class="w-6 h-6 rounded-full border border-white flex items-center justify-center">
+<div class="w-4 h-4 rounded-full border border-white relative">
+<div class="absolute inset-0 border-t border-white rotate-45"></div>
+<div class="absolute inset-0 border-l border-white -rotate-45"></div>
+</div>
+</div>
+</div>
+<span class="text-xl font-['Pacifico'] text-white">TwoStack</span>
+</a>
+<p class="text-gray-400">Modern web design for local businesses. We create stunning, professional websites that drive results.</p>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-primary">Home</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-primary">Services</a></li>
+<li><a href="#pricing" class="text-gray-400 hover:text-primary">Pricing</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-primary">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-primary">Web Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary">Mobile Responsive</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary">SEO Basics</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary">Maintenance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-4">Contact Us</h4>
+<ul class="space-y-2">
+<li class="flex items-center text-gray-400">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-phone-line"></i>
+</div>
+<span>076 736 9891</span>
+</li>
+<li class="flex items-center text-gray-400">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-mail-line"></i>
+</div>
+<span>yaseenadam45@gmail.com</span>
+</li>
+</ul>
+<div class="flex space-x-4 mt-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 text-center">
+<p class="text-gray-400">&copy; 2025 TwoStack. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script id="faq-toggle">
+document.addEventListener('DOMContentLoaded', function() {
+const faqButtons = document.querySelectorAll('[id$="-btn"]');
+faqButtons.forEach(button => {
+button.addEventListener('click', function() {
+const contentId = this.id.replace('-btn', '-content');
+const iconId = this.id.replace('-btn', '-icon');
+const content = document.getElementById(contentId);
+const icon = document.getElementById(iconId);
+content.classList.toggle('hidden');
+icon.classList.toggle('rotate-180');
+});
+});
+});
+</script>
+<script id="mobile-menu">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('.md\\:hidden');
+const mobileMenu = document.createElement('div');
+mobileMenu.className = 'fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col items-center justify-center hidden';
+mobileMenu.innerHTML = `
+<button class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center">
+<i class="ri-close-line text-white ri-2x"></i>
+</button>
+<div class="flex flex-col items-center space-y-8 text-xl">
+<a href="#" class="text-white hover:text-primary transition-colors">Home</a>
+<a href="#services" class="text-white hover:text-primary transition-colors">Services</a>
+<a href="#pricing" class="text-white hover:text-primary transition-colors">Pricing</a>
+<a href="#contact" class="text-white hover:text-primary transition-colors">Contact</a>
+</div>
+`;
+document.body.appendChild(mobileMenu);
+const closeButton = mobileMenu.querySelector('button');
+const mobileLinks = mobileMenu.querySelectorAll('a');
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('hidden');
+document.body.classList.add('overflow-hidden');
+});
+closeButton.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+document.body.classList.remove('overflow-hidden');
+});
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+document.body.classList.remove('overflow-hidden');
+});
+});
+});
+</script>
+<script id="form-validation">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.querySelector('form');
+if (form) {
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const phone = document.getElementById('phone').value;
+const message = document.getElementById('message').value;
+let isValid = true;
+if (!name) {
+isValid = false;
+document.getElementById('name').classList.add('border-red-500');
+} else {
+document.getElementById('name').classList.remove('border-red-500');
+}
+if (!email || !email.includes('@')) {
+isValid = false;
+document.getElementById('email').classList.add('border-red-500');
+} else {
+document.getElementById('email').classList.remove('border-red-500');
+}
+if (!phone) {
+isValid = false;
+document.getElementById('phone').classList.add('border-red-500');
+} else {
+document.getElementById('phone').classList.remove('border-red-500');
+}
+if (!message) {
+isValid = false;
+document.getElementById('message').classList.add('border-red-500');
+} else {
+document.getElementById('message').classList.remove('border-red-500');
+}
+if (isValid) {
+alert('Thank you for your message! We will get back to you soon.');
+form.reset();
+}
+});
+}
+});
+</script>
+</body>
+</html>
